@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support David in the 234 Buzz Challenge!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .logo img {
+            width: 100px;
+        }
+        .hero {
+            background: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxQTEhUTExMWFhUWGRsbGRgYFxoYHhgaHh8aIBobGB0aHSggGx0lGxoYITEhJSkrLi4uGh8zODMtNygtLisBCgoKDg0OGxAQGy8mICYyLS0tLS0vLS0tLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAIEBhQMBEQACEQEDEQH/x) no-repeat center center/cover;
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .cta-button {
+            background-color: #ff6600;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin-top: 20px;
+            display: inline-block;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #e55b00;
+        }
+        .support {
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .step {
+            background-color: #fff;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .step h3 {
+            margin-top: 0;
+        }
+        .button {
+            background-color: #008cba;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0074a5;
+        }
+        .share {
+            padding: 20px;
+            background-color: #ddd;
+            text-align: center;
+        }
+        textarea {
+            width: 80%;
+            height: 60px;
+            margin: 20px 0;
+            padding: 10px;
+            font-size: 16px;
+            resize: none;
+            border-radius: 5px;
+        }
+        .Done? {
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #ff6600;
+            text-decoration: none;
+        }
+
+        /* Media Queries for Responsive Buttons */
+        @media (max-width: 768px) {
+            .cta-button, .button {
+                width: 100%;
+                padding: 15px;
+                font-size: 1.1em;
+            }
+            textarea {
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cta-button, .button {
+                width: 100%;
+                padding: 20px;
+                font-size: 1em;
+            }
+            textarea {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="">
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Help David win the 234 Buzz Challenge!</h1>
+        <p>Like, Comment, Follow, and Subscribe to Support David on 234 project's Instagram, Facebook, and YouTube!</p>
+        <a href="#support" class="cta-button">Support David Now!</a>
+    </section>
+
+    <!-- How to Support Section -->
+    <section id="support" class="support">
+        <h2>How to Support</h2>
+
+        <div class="step">
+            <h3>Step 1: Instagram</h3>
+            <p>Click on the links below to LIKE David's picture, COMMENT with your favorite emoji, and importantly, FOLLOW the organization's page on Instagram.</p>
+            <a href="INSTAGRAM_POST_URL" class="button">Go to Instagram Post</a>
+        </div>
+        <div class="step">
+            <h3>Step 1: Facebook</h3>
+            <p>Click on the link below to LIKE David's picture, COMMENT with your favorite emoji, and importantly, FOLLOW the organization's page on Facebook.</p>
+            <a href="FACEBOOK_POST_URL" class="button">Go to Instagram Post</a>
+        </div>
+        <div class="step">
+            <h3>Step 3: YouTube</h3>
+            <p>Subscribe to the organization's YouTube channel and comment 'I subscribe for David' under the video to cast your vote!</p>
+            <a href="YOUTUBE_CHANNEL_URL" target="_blank" class="button">Go to YouTube Channel</a>
+        </div>
+    </section>
+
+    <!-- Share with Your Network Section -->
+    <section class="share">
+        <h2>Spread the Word</h2>
+        <p>Use the buttons below to share this page with your WhatsApp contacts. The more people who support, the better your chances!</p>
+        <a href="https://wa.me/?text=Help%20%5BYour%20Name%5D%20win%20the%20%5BOrganization's%20Name%5D%20contest%20by%20liking,%20following,%20and%20subscribing%20through%20this%20link:%20YOUR_LANDING_PAGE_URL" target="_blank" class="button">Share on WhatsApp</a>
+        <textarea readonly onclick="copyText()">Help [Your Name] win the [Organization's Name] contest by liking, following, and subscribing through this link: YOUR_LANDING_PAGE_URL</textarea>
+    </section>
+
+    <!-- Why Support Section -->
+    <section class="Done?">
+        <h2>Do this when you are done</h2>
+        <p>Tell your audience to send their usernames to verify their votes</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact: your.email@example.com | Follow me on <a href="YOUR_SOCIAL_MEDIA_LINK">Social Media</a></p>
+        <p>Privacy Policy & Terms of Service</p>
+    </footer>
+
+    <script>
+        function copyText() {
+            const textarea = document.querySelector("textarea");
+            textarea.select();
+            document.execCommand("copy");
+            alert("Text copied to clipboard");
+        }
+    </script>
+</body>
+</html>

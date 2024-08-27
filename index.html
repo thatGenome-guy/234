@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support David in the 234 Buzz Challenge!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .logo img {
+            width: 100px;
+        }
+        .cta-button {
+            background-color: #ff6600;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin-top: 20px;
+            display: inline-block;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #e55b00;
+        }
+        .support {
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .step {
+            background-color: #fff;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        .step h3 {
+            margin-top: 0;
+        }
+        .button {
+            background-color: #008cba;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0074a5;
+        }
+        .share {
+            padding: 20px;
+            background-color: #ddd;
+            text-align: center;
+        }
+        textarea {
+            width: 80%;
+            height: 60px;
+            margin: 20px 0;
+            padding: 10px;
+            font-size: 16px;
+            resize: none;
+            border-radius: 5px;
+        }
+        .Done {
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #ff6600;
+            text-decoration: none;
+        }
+
+        /* Media Queries for Responsive Buttons */
+        @media (max-width: 768px) {
+            .cta-button, .button {
+                width: 100%;
+                padding: 15px;
+                font-size: 1.1em;
+            }
+            textarea {
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cta-button, .button {
+                width: 100%;
+                padding: 20px;
+                font-size: 1em;
+            }
+            textarea {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="">
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-vdicF3N_ulmyF2r7JG1UwYxof1fb_KGwUg&s') no-repeat center center/cover; color: #fff; padding: 60px 20px; text-align: center; position: relative;">
+        <h1 style="position: relative; z-index: 2;">Win up to Fifty Thousand Naira as you help David reach his target!</h1>
+        <p style="position: relative; z-index: 2;">Like, Comment, Follow, and Subscribe to Support David on 234 project's Instagram, Facebook, and YouTube!</p>
+        <a href="#support" class="cta-button" style="position: relative; z-index: 2; background-color: #ff5722; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Support David Now!</a>
+        <div style="content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+    </section>
+
+    <!-- How to Support Section -->
+    <section id="support" class="support">
+        <h2>How to Support | Ensure you perform the tasks in bold tags</h2>
+
+        <div class="step">
+            <h3>Step 1: Instagram</h3>
+            <p>Click on the links below to <b>LIKE</b> David's picture, <b>COMMENT</b> with your favorite support line, and importantly, <b>FOLLOW</b> the organization's page on Instagram.</p>
+            <a href="INSTAGRAM_POST_URL" class="button">Go to Instagram Post</a>
+        </div>
+        <div class="step">
+            <h3>Step 1: Facebook</h3>
+            <p>Click on the link below to <b>LIKE</b> David's picture, <b>COMMENT</b> with your favorite support line, and importantly, <b>FOLLOW</b> the organization's page on Facebook.</p>
+            <a href="FACEBOOK_POST_URL" class="button">Go to Instagram Post</a>
+        </div>
+        <div class="step">
+            <h3>Step 3: YouTube</h3>
+            <p><b>SUBSCRIBE</b> to the organization's YouTube channel and <b>COMMENT</b> <i>'I subscribe for David'</i> under the video to cast your vote!</p>
+            <a href="YOUTUBE_CHANNEL_URL" target="_blank" class="button">Go to YouTube Channel</a>
+        </div>
+    </section>
+
+    <!-- Share with Your Network Section -->
+    <section class="share">
+        <h2>DONE?</h2>
+        <p>Instruct your audience to send their usernames to you, afterwhich we will go ahead to verify their votes</p>
+        
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Here is your chance to win | Get it underway! G3nome2024</p>
+        <p>Terms of Service apply</p>
+    </footer>
+
+    <script>
+        function copyText() {
+            const textarea = document.querySelector("textarea");
+            textarea.select();
+            document.execCommand("copy");
+            alert("Text copied to clipboard");
+        }
+    </script>
+</body>
+</html>
