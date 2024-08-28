@@ -5,115 +5,248 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support David in the 234 Buzz Challenge!</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
         }
+
         header {
-            background-color: #333;
+            background-color: #222;
             color: #fff;
-            padding: 10px 0;
+            padding: 15px 0;
             text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
-        .logo img {
-            width: 100px;
+
+        header .logo img {
+            width: 120px;
+            display: block;
+            margin: 0 auto;
         }
+
+        .hero {
+            background: url('https://img.freepik.com/free-vector/gradient-liquid-abstract-background_23-2148926399.jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 120px 20px;
+            text-align: center;
+            position: relative;
+            border-radius: 0 0 50% 50%;
+            margin-bottom: -50px;
+            z-index: 1;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+            border-radius: 0 0 50% 50%;
+        }
+
+        .hero h1, .hero p, .cta-button {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+        }
+
         .cta-button {
-            background-color: #ff6600;
+            background-color: #ff5722;
             border: none;
             color: #fff;
-            padding: 10px 20px;
+            padding: 15px 30px;
             text-decoration: none;
             font-size: 1.2em;
-            margin-top: 20px;
-            display: inline-block;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
         .cta-button:hover {
-            background-color: #e55b00;
+            background-color: #e64a19;
+            transform: translateY(-3px);
         }
-        .support {
-            padding: 20px;
-            background-color: #f4f4f4;
+
+        .section {
+            padding: 60px 20px;
+            position: relative;
+            z-index: 1;
+            background: linear-gradient(to right, #ffffff, #f4f4f4);
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            margin: -50px auto 50px auto;
+            max-width: 90%;
+            overflow: hidden;
         }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            width: 200%;
+            height: 100px;
+            background: rgba(255, 87, 34, 0.2);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 0;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ff5722;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #555;
+            position: relative;
+            z-index: 1;
+        }
+
         .step {
             background-color: #fff;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            z-index: 1;
         }
+
+        .step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
         .step h3 {
             margin-top: 0;
+            font-size: 1.5em;
+            color: #ff5722;
+            font-weight: 600;
         }
+
         .button {
             background-color: #008cba;
             color: white;
-            padding: 10px 15px;
+            padding: 12px 25px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            border-radius: 5px;
+            border-radius: 50px;
             font-size: 16px;
-            margin-top: 10px;
-            transition: background-color 0.3s ease;
+            margin-top: 15px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
         .button:hover {
             background-color: #0074a5;
+            transform: translateY(-3px);
         }
+
         .share {
-            padding: 20px;
-            background-color: #ddd;
+            padding: 40px 20px;
+            background: rgba(255, 87, 34, 0.1);
             text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 30px auto;
+            max-width: 90%;
+            position: relative;
+            z-index: 1;
         }
-        textarea {
-            width: 80%;
-            height: 60px;
-            margin: 20px 0;
-            padding: 10px;
-            font-size: 16px;
-            resize: none;
-            border-radius: 5px;
-        }
-        .Done {
-            padding: 20px;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
+
         footer {
-            background-color: #333;
+            background-color: #222;
             color: #fff;
             text-align: center;
-            padding: 10px 0;
+            padding: 40px 20px;
             font-size: 0.9em;
+            position: relative;
+            overflow: hidden;
+            border-top: 6px solid #ff5722;
         }
-        footer a {
-            color: #ff6600;
+
+        footer .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer .footer-content h3 {
+            margin: 0;
+            font-size: 1.8em;
+            color: #ff5722;
+            font-weight: 600;
+        }
+
+        footer .footer-content p {
+            margin: 10px 0;
+        }
+
+        footer .social-links {
+            margin: 20px 0;
+        }
+
+        footer .social-links a {
+            color: #fff;
             text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-links a:hover {
+            color: #ff5722;
+        }
+
+        footer .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 10px;
+            margin-top: 20px;
+            font-size: 0.8em;
         }
 
         /* Media Queries for Responsive Buttons */
         @media (max-width: 768px) {
             .cta-button, .button {
-                width: 100%;
+                width: 90%;
                 padding: 15px;
                 font-size: 1.1em;
-            }
-            textarea {
-                width: 95%;
             }
         }
 
         @media (max-width: 480px) {
             .cta-button, .button {
                 width: 100%;
-                padding: 20px;
+                padding: 15px;
                 font-size: 1em;
-            }
-            textarea {
-                width: 100%;
             }
         }
     </style>
@@ -127,54 +260,60 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-vdicF3N_ulmyF2r7JG1UwYxof1fb_KGwUg&s') no-repeat center center/cover; color: #fff; padding: 60px 20px; text-align: center; position: relative;">
-        <h1 style="position: relative; z-index: 2;">Win up to Fifty Thousand Naira as you help David reach his target!</h1>
-        <p style="position: relative; z-index: 2;">Like, Comment, Follow, and Subscribe to Support David on 234 project's Instagram, Facebook, and YouTube!</p>
-        <a href="#support" class="cta-button" style="position: relative; z-index: 2; background-color: #ff5722; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Support David Now!</a>
-        <div style="content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.5); z-index: 1;"></div>
+    <section class="hero">
+        <h1>Win up to Fifty Thousand Naira as you help David reach his target!</h1>
+        <p>Like, Comment, Follow, and Subscribe to Support David on 234 project's Instagram, Facebook, and YouTube!</p>
+        <a href="#support" class="cta-button">Details below</a>
     </section>
 
-    <!-- How to Support Section -->
-    <section id="support" class="support">
-        <h2>How to Support | Ensure you perform the tasks in bold tags</h2>
+    <!-- Inline Feature Section -->
+    <section class="section">
+        <h2>Modality</h2>
+        <p>To qualify for this Contest prize, ensure to perform all the tasks (Like, Comment, Follow and Subscribe) in each of the 3 steps highlighted below! The aim is to help David reach his target in the 234project's Buzz challenge. Kindly understand that the organizers of this contest are fellow students, and that account details of winners shall be selected randomly and credited by 6th September, 2024. <br><b>FREEBIE</b>: It literally could be you! &#127881</p>
+        <a href="#support" class="button">Support David Here!</a>
+    </section>
 
+    <!-- Support Section -->
+    <section id="support" class="section">
+        <h2>How to Enter</h2>
         <div class="step">
             <h3>Step 1: Instagram</h3>
-            <p>Click on the links below to <b>LIKE</b> David's picture, <b>COMMENT</b> with your favorite support line, and importantly, <b>FOLLOW</b> the organization's page on Instagram.</p>
+            <p>Click on this link to <b>LIKE</b> David's picture on 234project's IG page, <b>COMMENT</b> with your favorite support words, and importantly, <b>FOLLOW</b> the 234project's Instagram page</p>
             <a href="INSTAGRAM_POST_URL" class="button">Go to Instagram Post</a>
         </div>
         <div class="step">
-            <h3>Step 1: Facebook</h3>
-            <p>Click on the link below to <b>LIKE</b> David's picture, <b>COMMENT</b> with your favorite support line, and importantly, <b>FOLLOW</b> the organization's page on Facebook.</p>
-            <a href="FACEBOOK_POST_URL" class="button">Go to Instagram Post</a>
+            <h3>Step 2: Facebook</h3>
+            <p>Click on this link to <b>LIKE</b> David's picture on 234project's FB page, <b>COMMENT</b> with your favorite support words, and importantly, <b>FOLLOW</b> the 234project's Facebook page.</p>
+            <a href="FACEBOOK_POST_URL" class="button">Go to Facebook Post</a>
         </div>
         <div class="step">
             <h3>Step 3: YouTube</h3>
-            <p><b>SUBSCRIBE</b> to the organization's YouTube channel and <b>COMMENT</b> <i>'I subscribe for David'</i> under the video to cast your vote!</p>
-            <a href="YOUTUBE_CHANNEL_URL" target="_blank" class="button">Go to YouTube Channel</a>
+            <p>A general post was dedicated to this category. Click on this link to <b>LIKE</b> video, <b>COMMENT</b> <i>"I subscribed for David"</i>, and importantly, <b>SUBSCRIBE</b> to the 234project's YouTube channel.</p>
+            <a href="YOUTUBE_VIDEO_URL" class="button">Go to YouTube Post</a>
         </div>
     </section>
 
-    <!-- Share with Your Network Section -->
+    <!-- Share Section -->
     <section class="share">
         <h2>DONE?</h2>
-        <p>Instruct your audience to send their usernames to you, afterwhich we will go ahead to verify their votes</p>
-        
+        <p>You are a step closer to completion! Click the link below to confirm your entry for this Prize contest.</p>
+        <a href="#" class="button">Completion Form</a>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>Here is your chance to win | Get it underway! G3nome2024</p>
-        <p>Terms of Service apply</p>
+        <div class="footer-content">
+            <h3>Stay Connected</h3>
+            <p>The organization you have followed, through this contest is committed to ensuring that Nigerian youths are not victims of<br> limited socio-economic system but are empowered to become global changemakers!</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+            </div>
+            <div class="footer-bottom">
+                &copy; G3nome 2024. All rights reserved.
+            </div>
+        </div>
     </footer>
-
-    <script>
-        function copyText() {
-            const textarea = document.querySelector("textarea");
-            textarea.select();
-            document.execCommand("copy");
-            alert("Text copied to clipboard");
-        }
-    </script>
 </body>
 </html>
